@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+# setuptools files
+.eggs/
+*.egg
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+
+# Editor/IDE files
+.idea/  # For PyCharm/IntelliJ
+.vscode/ # For VS Code
+
+# Operating System Files
+.DS_Store # Mac
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+share/man/
+local/
+
+# Environment variables and sensitive data files
+.env
+.flaskenv
+instance/

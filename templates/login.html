@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5 col-lg-4">
+        <div class="card p-4">
+            <div class="text-center mb-4">
+                <i class="bi bi-person-circle display-4 text-primary"></i>
+                <h3 class="mt-2">System Login</h3>
+                <p class="text-muted">Access your library account</p>
+            </div>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label">I am a...</label>
+                    <select name="role" class="form-select">
+                        <option value="member">Member (Student/Faculty)</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+            </form>
+            <div class="mt-4 text-center">
+                <p class="mb-0 text-muted small">New member? <a href="{{ url_for('register') }}" class="text-primary text-decoration-none fw-bold">Register here</a></p>
+            </div>
+        </div>
+        <div class="mt-3 card border-warning bg-warning bg-opacity-10 p-2 text-center small">
+            <strong>Admin Demo:</strong> admin / password123
+        </div>
+    </div>
+</div>
+{% endblock %}
